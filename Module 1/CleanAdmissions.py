@@ -1,6 +1,6 @@
 def prep_admissions(admissions):
     import pandas as pd
-    admissions['admission_type_description'] = ['Unknown' if ((x in ['Not Available', 'Not Mapped', '?']) | (pd.isnull(x))) else x 
+    admissions['admission_type_description'] = ['Unknown' if ((x in ['Not Available', 'Not Mapped', 'NULL']) | (pd.isnull(x))) else x 
                                                  for x in admissions['admission_type_description']]
     return admissions
 
